@@ -165,7 +165,7 @@ void updateStudentByPRN(struct Student students[], int numStudents) {
     }
 
     printf("Student with PRN %s not found.\n", prn);
-}]
+}
 
 // Function to delete a student
 void deleteStudent(struct Student students[], int *numStudents) {
