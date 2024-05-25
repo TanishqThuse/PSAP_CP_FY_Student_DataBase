@@ -1,7 +1,3 @@
-Certainly! Here’s a README file content for your PSAP Course project repository based on the provided code:
-
----
-
 # Student Record Management System
 
 This project is a simple Student Record Management System written in C. It allows you to add, display, search, update, and delete student records. Additionally, you can save the student data to a file and load it back into the system.
