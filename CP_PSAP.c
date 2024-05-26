@@ -3,8 +3,17 @@
 #include <string.h>
 
 #define MAX_STUDENTS 100
-// #define FILENAME "student_data.dat"  
+// #define FILENAME "student_data.dat"  //dat format not working
 #define FILENAME "student_data.txt"
+
+
+/*KeyNotes by Tanishq -> At some places :       
+            scanf(" %[^\n]", students[i].fullName);
+            // fgets(students[i].fullName, 100, stdin)
+            //Reason -> if i use fgets it does not update the value
+            //even fflush(stdin) not working
+            so %[^\n] => format specifier is better            
+            */
 
 // Structure to represent a student
 struct Student {
@@ -234,6 +243,9 @@ void loadDataFromFile(struct Student students[], int *numStudents) {
                   &students[*numStudents].marks) == 6) {
         (*numStudents)++;
     }
+
+    /*fscanf function returns the numbe*/
+    //SO bAsically when it is not == 6 , i.e no value is read from the loop ends
 
     fclose(file);
     printf("Data loaded from file successfully.\n");
