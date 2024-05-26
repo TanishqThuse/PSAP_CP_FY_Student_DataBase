@@ -141,8 +141,9 @@ void updateStudentByPRN(struct Student students[], int numStudents) {
             }
 
             printf("Enter new Full Name: ");
-            // scanf(" %[^\n]", students[i].fullName);
-            fgets(students[i].fullName, 100, stdin);
+            scanf(" %[^\n]", students[i].fullName);
+            // fgets(students[i].fullName, 100, stdin)
+            //Reason -> if i use fgets it does not update the value
 
             printf("Enter new Branch: ");
             scanf("%s", students[i].branch);
