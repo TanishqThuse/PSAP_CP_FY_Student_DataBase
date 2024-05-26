@@ -233,10 +233,12 @@ void loadDataFromFile(struct Student students[], int *numStudents) {
         return;
     }
 
+    //The reason i used pointer was to 
     *numStudents = 0;
     while (fscanf(file, "%d %s %s %s %c %f",
                   &students[*numStudents].rollNumber,
                   students[*numStudents].prn,
+                // &students[*numStudents].prn,
                   students[*numStudents].fullName,
                   students[*numStudents].branch,
                   &students[*numStudents].division,
@@ -282,9 +284,11 @@ int main() {
                 deleteStudent(students, &numStudents);
                 break;
             case 6:
+                //we don't need a pointer coz we have already checked students not more than 100
                 saveDataToFile(students, numStudents);
                 break;
             case 7:
+                //we take pointer coz we need to check we dont load more than 100
                 loadDataFromFile(students, &numStudents);
                 break;
             case 8: 
