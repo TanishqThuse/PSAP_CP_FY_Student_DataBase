@@ -31,6 +31,7 @@ void displayMenu() {
 }
 
 // Function to handle input errors
+//StackOverflow 
 void clearBuffer() {
     while (getchar() != '\n');
 }
@@ -135,12 +136,13 @@ void updateStudentByPRN(struct Student students[], int numStudents) {
             printf("Enter new Roll Number: ");
             if (scanf("%d", &students[i].rollNumber) != 1) {
                 printf("Invalid input. Roll Number must be an integer.\n");
-                clearBuffer();
+                clearBuffer(); //-> fflush(stdin)
                 return;
             }
 
             printf("Enter new Full Name: ");
-            scanf(" %[^\n]", students[i].fullName);
+            // scanf(" %[^\n]", students[i].fullName);
+            fgets(students[i].fullName, 100, stdin);
 
             printf("Enter new Branch: ");
             scanf("%s", students[i].branch);
@@ -272,12 +274,12 @@ int main() {
             case 7:
                 loadDataFromFile(students, &numStudents);
                 break;
-            case 8:
+            case 8: 
                 printf("Exiting program.\n");
                 break;
             default:
                 printf("Invalid choice. Please try again.\n");
-        }
+        }     
     } while (choice != 8);
 
     return 0;

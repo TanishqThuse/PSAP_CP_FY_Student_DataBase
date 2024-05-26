@@ -62,14 +62,17 @@ Here’s an example interaction with the system:
 
 ```
 Student Record Management System
-1. Add Student
-2. Display All Students
-3. Search Student by PRN
-4. Update Student Information by PRN
-5. Delete Student
-6. Save Data to File
-7. Load Data from File
-8. Exit
+1. Add Student --> Isha
+2. Display All Students --> Shatanand
+3. Search Student by PRN --> Anshul
+4. Update Student Information by PRN --> Tanishq & Anshul 
+5. Delete Student --> Prashant
+6. Save Data to File --> Tanishq
+7. Load Data from File --> Tanishq
+8. Exit --> 
+9. int main -> switch case --> Raj
+10. Conclusion --> Tanishq
+Done
 Enter your choice: 1
 
 Enter Roll Number: 101
